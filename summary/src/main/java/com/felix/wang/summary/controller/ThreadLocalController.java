@@ -16,7 +16,6 @@ public class ThreadLocalController {
 
     private static final ThreadLocal<Integer> currentUser = ThreadLocal.withInitial(() -> null);
 
-
     @GetMapping("wrong")
     public Map wrong(@RequestParam("userId") Integer userId) {
         //设置用户信息之前先查询一次ThreadLocal中的用户信息
