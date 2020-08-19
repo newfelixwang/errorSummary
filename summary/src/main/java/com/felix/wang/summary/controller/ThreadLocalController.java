@@ -48,6 +48,7 @@ public class ThreadLocalController {
             return result;
         }finally {
             //web服务器往往采用线程池的方式来创建线程，在处理多个线程的时候会涉及线程
+
             // 重用的问题，在使用万threadLocal处理时需要及时清空数据
             currentUser.remove();
         }
